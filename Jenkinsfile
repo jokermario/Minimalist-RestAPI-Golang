@@ -1,6 +1,11 @@
 pipeline {
     agent any
-
+    tools {
+        go 'go1.14'
+    }
+    environment {
+        GO114MODULE = 'on'
+    }
     stages {
         stage('Pre Test') {
             steps {
