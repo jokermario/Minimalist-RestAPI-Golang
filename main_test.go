@@ -3,11 +3,13 @@ package main
 import (
 	"bytes"
 	"encoding/json"
+	"github.com/Minimalist-RestAPI-Golang/config"
 	"github.com/joho/godotenv"
 	_ "github.com/lib/pq"
 	"log"
 	"net/http"
 	"net/http/httptest"
+	"os"
 	"strconv"
 	"testing"
 )
@@ -29,15 +31,15 @@ func init() {
 	}
 }
 
-//func TestMain(m *testing.M) {
-//	conf := config.NewConfig()
-//
-//	a.Initialize(conf.DbUsername, conf.DbPassword, conf.DbName)
-//	ensureTableExists()
-//	code := m.Run()
-//	clearTable()
-//	os.Exit(code)
-//}
+func TestMain(m *testing.M) {
+	conf := config.NewConfig()
+
+	a.Initialize(conf.DbUsername, conf.DbPassword, conf.DbName)
+	ensureTableExists()
+	code := m.Run()
+	clearTable()
+	os.Exit(code)
+}
 
 //func TestEmptyTable(t *testing.T) {
 //	clearTable()
