@@ -7,8 +7,14 @@ agent:
 blocks:
   - name: Test
     task:
+      prologue:
+        commands:
+          - cache restore
+      epilogue:
+        command:
+          - cache store
       jobs:
-        - name: go test
+        - name: Go test
           commands:
             - sem-service start postgres
             - createdb -U postgres -h 0.0.0.0 firstTestDB
@@ -17,7 +23,6 @@ blocks:
             - export GOPATH=~/go
             - 'export PATH=/home/semaphore/go/bin:$PATH'
             - checkout
-            - go get ./...
             - go test -v
             - go build -v .
 execution_time_limit:
