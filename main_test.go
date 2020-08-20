@@ -93,7 +93,7 @@ func TestGetNonExistentProduct(t *testing.T) {
 			name:                   "GetNonExistentProductTest",
 			in:                     httptest.NewRequest("GET", "/product/12", nil),
 			out:                    httptest.NewRecorder(),
-			expectedStatus:         http.StatusOK,
+			expectedStatus:         http.StatusNotFound,
 			expectedMapErrorKeyVal: "Product not found",
 		},
 	}
