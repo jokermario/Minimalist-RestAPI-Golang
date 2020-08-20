@@ -11,8 +11,9 @@ blocks:
         commands:
           - cache restore
       epilogue:
-        command:
-          - cache store
+        always:
+          commands:
+            - cache store
       jobs:
         - name: Go test
           commands:
