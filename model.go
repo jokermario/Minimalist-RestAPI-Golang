@@ -5,9 +5,9 @@ import (
 )
 
 type product struct {
-	ID 		int		`json:"id"`
-	Name	string	`json:"name"`
-	Price	int	`json:"price"`
+	ID    int    `json:"id"`
+	Name  string `json:"name"`
+	Price int    `json:"price"`
 }
 
 func (p *product) getProduct(db *sql.DB) error {
@@ -27,7 +27,7 @@ func (p *product) deleteProduct(db *sql.DB) error {
 }
 
 func (p *product) createProduct(db *sql.DB) error {
-	if err := db.QueryRow("INSERT INTO products (name, price) VALUES ($1, $2) RETURNING id", p.Name, p.Price).Scan(&p.ID); err != nil{
+	if err := db.QueryRow("INSERT INTO products (name, price) VALUES ($1, $2) RETURNING id", p.Name, p.Price).Scan(&p.ID); err != nil {
 		return err
 	}
 
@@ -37,15 +37,15 @@ func (p *product) createProduct(db *sql.DB) error {
 
 func (p *product) getProducts(db *sql.DB, start, count int) ([]product, error) {
 	rows, err := db.Query("SELECT id, name, price FROM products LIMIT $1 OFFSET $2", count, start)
-	if err != nil{
+	if err != nil {
 		return nil, err
 	}
 	defer rows.Close()
 
 	var products []product
-	for rows.Next(){
+	for rows.Next() {
 		var p product
-		if err := rows.Scan(&p.ID, &p.Name, &p.Price); err != nil{
+		if err := rows.Scan(&p.ID, &p.Name, &p.Price); err != nil {
 			return nil, err
 		}
 		products = append(products, p)
