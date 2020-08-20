@@ -20,7 +20,7 @@ const tableCreationQuery = `CREATE TABLE IF NOT EXISTS products
 							(
 								id SERIAL,
 								name TEXT NOT NULL,
-								price NUMERIC(10,2) NOT NULL DEFAULT 0.00,
+								price VARCHAR (40) NOT NULL DEFAULT 0.00,
 								CONSTRAINT products_pkey PRIMARY KEY (id)
 							)`
 
@@ -119,11 +119,11 @@ func TestGetNonExistentProduct(t *testing.T) {
 	}
 }
 
-//
+
 func TestCreateProduct(t *testing.T) {
 	clearTable()
 
-	jsonStr := []byte(`{"name":"product 1", "price":"11.90"}`)
+	jsonStr := []byte(`{"name":"product 1", "price": 1100}`)
 
 	tests := []struct {
 		name           string
@@ -158,8 +158,8 @@ func TestCreateProduct(t *testing.T) {
 				t.Fail()
 			}
 
-			if m["price"] != "11.90" {
-				t.Logf("expected the product price to be %s\ngot: %s\n", "11.90", m["price"])
+			if m["price"] != 1100.00 {
+				t.Logf("expected the product price to be %.2f\ngot: %.2f\n", 1100.00, m["price"])
 				t.Fail()
 			}
 
@@ -235,7 +235,7 @@ func TestUpdateProduct(t *testing.T) {
 	clearTable()
 	addProducts(2)
 
-	jsonStr := []byte(`{"name":"product 1 updated", "price":"14.00"}`)
+	jsonStr := []byte(`{"name":"product 1 updated", "price":1400}`)
 
 	tests := []struct {
 		name           string
@@ -358,6 +358,6 @@ func addProducts(count int) {
 	}
 
 	for i := 1; i < count; i++ {
-		a.Db.Exec("INSERT INTO products (name, price) VALUES ($1, $2)", "Product "+strconv.Itoa(i), (i+1.0)*10)
+		a.Db.Exec("INSERT INTO products (name, price) VALUES ($1, $2)", "Product "+strconv.Itoa(i), (i+1)*10)
 	}
 }

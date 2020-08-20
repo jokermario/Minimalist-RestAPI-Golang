@@ -19,7 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b3f1eac-95dd-4afb-8bf7-03938c644044" name="Default Changelist" comment="" />
+    <list default="true" id="5b3f1eac-95dd-4afb-8bf7-03938c644044" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.go" beforeDir="false" afterPath="$PROJECT_DIR$/app.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/main_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model.go" beforeDir="false" afterPath="$PROJECT_DIR$/model.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,6 +63,7 @@
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager" selected="Go Build.go build github.com/Minimalist-RestAPI-Golang">
@@ -132,22 +138,22 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="779" y="149" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1597630837012" />
-    <state width="1877" height="288" key="GridCell.Tab.0.bottom" timestamp="1597784666900">
+    <state width="1877" height="288" key="GridCell.Tab.0.bottom" timestamp="1597937724845">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="288" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1597784666900" />
-    <state width="1877" height="288" key="GridCell.Tab.0.center" timestamp="1597784666900">
+    <state width="1877" height="288" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1597937724845" />
+    <state width="1877" height="288" key="GridCell.Tab.0.center" timestamp="1597937724845">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="288" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1597784666900" />
-    <state width="1877" height="288" key="GridCell.Tab.0.left" timestamp="1597784666900">
+    <state width="1877" height="288" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1597937724845" />
+    <state width="1877" height="288" key="GridCell.Tab.0.left" timestamp="1597937724845">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="288" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1597784666900" />
-    <state width="1877" height="288" key="GridCell.Tab.0.right" timestamp="1597784666900">
+    <state width="1877" height="288" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1597937724845" />
+    <state width="1877" height="288" key="GridCell.Tab.0.right" timestamp="1597937724845">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="288" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1597784666900" />
+    <state width="1877" height="288" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1597937724845" />
     <state x="461" y="184" key="SettingsEditor" timestamp="1597861494776">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -156,5 +162,9 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="569" y="150" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1597686853052" />
+    <state x="668" y="115" width="583" height="849" key="find.popup" timestamp="1597941963530">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="668" y="115" width="583" height="849" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1597941963530" />
   </component>
 </project>

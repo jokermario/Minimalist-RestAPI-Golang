@@ -7,7 +7,7 @@ import (
 type product struct {
 	ID 		int		`json:"id"`
 	Name	string	`json:"name"`
-	Price	string	`json:"price"`
+	Price	int	`json:"price"`
 }
 
 func (p *product) getProduct(db *sql.DB) error {

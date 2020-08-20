@@ -23,7 +23,7 @@ func (a *App) Initialize(user, pass, dbname string)  {
 
 	var err error
 	a.Db, err = sql.Open("postgres", connectionString)
-	if err != nil{
+	if err != nil {
 		log.Fatal(err)
 	}
 
@@ -88,10 +88,13 @@ func (a *App) getProducts(w http.ResponseWriter, r *http.Request)  {
 func (a *App) createProduct(w http.ResponseWriter, r *http.Request) {
 	p := new(product)
 	decoder := json.NewDecoder(r.Body)
+
 	if err := decoder.Decode(&p); err != nil {
 		respondWithError(w, http.StatusBadRequest, err.Error())
 		return
 	}
+
+	fmt.Println(*p)
 
 	defer r.Body.Close()
 
