@@ -4,6 +4,7 @@ agent:
   machine:
     type: e1-standard-2
     os_image: ubuntu1804
+
 blocks:
   - name: Test
     task:
@@ -11,6 +12,7 @@ blocks:
         - name: go test
           commands:
             - sem-service start postgres
+            - createdb -U postgres -h 0.0.0.0 firstTestDB
             - sem-version go 1.14
             - export GO111MODULE=on
             - export GOPATH=~/go
